@@ -6,6 +6,7 @@ gem 'jbuilder'
 
 group :development do
     gem 'spring'
+    gem 'rspec-rails'
 end
 
 gem 'pg'
