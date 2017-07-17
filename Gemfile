@@ -5,8 +5,12 @@ gem 'rails-api'
 gem 'jbuilder'
 
 group :development do
-    gem 'spring'
-    gem 'rspec-rails'
+    gem 'spring', '~>2.0', '>=2.0.0'
+end
+
+group :development, :test do
+    gem 'rspec-rails', '~>3.5', '>=3.5.2'
+    gem 'httparty', '~>0.14', '>=0.14.0'
 end
 
 gem 'pg'
