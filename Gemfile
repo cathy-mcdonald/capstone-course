@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.6'
-gem 'rails-api'
+gem 'rails-api', '~>0.4', '>=0.4.0'
+gem 'rack-cors', '~>0.4', '>=0.4.0', require: 'rack/cors'
+gem 'pry-rails'
 gem 'jbuilder'
 
 group :development do
@@ -10,7 +12,12 @@ end
 
 group :development, :test do
     gem 'rspec-rails', '~>3.5', '>=3.5.2'
+    gem 'byebug', '~>9.0', '>=9.0.6'
     gem 'httparty', '~>0.14', '>=0.14.0'
+end
+
+group :production do
+  gem 'rails_12factor', '~>0.0', '>=0.0.3'
 end
 
 gem 'pg'
