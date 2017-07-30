@@ -2,4 +2,5 @@
  * SPA Demo manifest file
  * 
  *= require bootstrap
+ *= require spa/layout
  */
