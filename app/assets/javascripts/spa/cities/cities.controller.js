@@ -10,6 +10,9 @@
 		vm.cities;
 		vm.city;
 		vm.create = create;
+		vm.edit = edit;
+		vm.update = update;
+		vm.remove = remove;
 		
 		activate();
 		return;
@@ -35,6 +38,35 @@
 				newCity();
 			})
 			.catch(handleError);
+		}
+		
+		function edit(object) {
+			vm.city = object;
+		}
+		
+		function update() {
+			vm.city.$update()
+			.then(function(response){				
+			})
+			.catch(handleError);
+		}
+		
+		function remove() {
+			vm.city.$delete()
+			.then(function(response){
+				removeElement(vm.cities, vm.city);
+				newCity();			
+			})
+			.catch(handleError);			
+		}
+		
+		function removeElement(elements, element) {
+			for (var i=0; i < elements.length; i++) {
+				if (elements[i].id == element.id) {
+					elements.splice(i,1);
+					break;
+				}
+			}
 		}
 	};
 	
