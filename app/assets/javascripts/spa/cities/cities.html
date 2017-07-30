@@ -1,0 +1,9 @@
+<div>
+	<h3>Cities</h3>
+	<span>This is app/assets/javascripts/spa/cities/cities.html</span>
+	<ul>
+		<li ng-repeat="city in citiesVM.cities | orderBy:'name'">
+			<a ng-click="citiesVM.edit(city)">{{city.name}}</a>
+		</li>
+	</ul>
+</div>
