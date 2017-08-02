@@ -1,33 +1,12 @@
 <div>
-	<h3>Cities</h3>
-	<span>This is app/assets/javascripts/spa/cities/cities.html</span>
+	<h2>Cities</h2>
 	
-	<form>
-		<div>
-			<label>Name:</label>
-			<input name="name"
-				   ng-model="citiesVM.city.name"
-				   required="required"/>
-		</div>
-		<button ng-if="!citiesVM.city.id"
-				type="submit" 
-			    ng-click="citiesVM.create()">
-			Create City
-		</button>
-		<div ng-if="citiesVM.city.id">
-			<button type="submit" 
-					ng-click="citiesVM.update()">
-				Update City
-			</button>
-			<button type="submit" 
-					ng-click="citiesVM.remove()">
-				Remove City
-			</button>
-		</div>
-	</form>
+	<div sd-cities-form city="citiesVM.city"></div>
 	
-	<ul>
-		<li ng-repeat="city in citiesVM.cities | orderBy:'name'">
+	<p></p>
+	
+	<ul class="list-group">
+		<li ng-repeat="city in citiesVM.cities | orderBy:'name'" class="list-group-item">
 			<a ng-click="citiesVM.edit(city)">{{city.name}}</a>
 		</li>
 	</ul>

@@ -15,4 +15,5 @@
  *= require spa/cities/cities.service
  *= require spa/cities/cities.controller
  *= require spa/cities/cities.directive
+ *= require spa/cities/citiesForm.directive
  */
