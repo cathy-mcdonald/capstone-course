@@ -1,0 +1,30 @@
+body {
+	font-family: Tahoma, Geneva, sans-serif;
+	background-color: #bcd5d1;
+	color: #1d2120;
+}
+
+h2 {
+	color: #1d2120;
+}
+
+label {
+	margin-left: 20px;
+}
+
+button {
+	background-color: #5a5c51;
+	color: white;
+}
+
+.list-group-item {
+	background-color: #ba9077;	
+}
+
+a:link {
+	color: #bcd5d1;
+}
+
+a:hover {
+	color: #1d2120;
+}

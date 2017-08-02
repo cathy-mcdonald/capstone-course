@@ -1,0 +1,13 @@
+<div>
+	<h2>Cities</h2>
+	
+	<div sd-cities-form city="citiesVM.city"></div>
+	
+	<p></p>
+	
+	<ul class="list-group">
+		<li ng-repeat="city in citiesVM.cities | orderBy:'name'" class="list-group-item">
+			<a ng-click="citiesVM.edit(city)">{{city.name}}</a>
+		</li>
+	</ul>
+</div>
